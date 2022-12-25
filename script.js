@@ -16,6 +16,10 @@ let yourChoice = prompt ("Choose")
 
 const runGame = (playerSelection, computerSelection) => {
     if (playerSelection.toLowerCase() === computerSelection) {
-      return "Draw"
-    }
+        return "Draw"
+      } else if ((playerSelection.toLowerCase () == "rock" && computerSelection == "scissors") || (playerSelection.toLowerCase () == "scissors" && computerSelection == "paper") || (playerSelection.toLowerCase () == "paper" && computerSelection == "rock")) {
+        return "Win" +playerSelection + " "+computerSelection
+      } else if ((playerSelection.toLowerCase () == "rock" && computerSelection == "paper") || (playerSelection.toLowerCase () == "scissors" && computerSelection == "rock") || (playerSelection.toLowerCase () == "paper" && computerSelection == "scissors")) {
+        return "Loss"+playerSelection+ " "+computerSelection
+      }
   }
