@@ -25,7 +25,7 @@ const runGame = (playerSelection, computerSelection) => {
   const game = () => {
     let player = 0
     let computer = 0
-    for (let i = 0; i < 5; i++) {
+    while (true) {
       let yourChoice = prompt ("Choose Rock, Paper, or Scissors")
       let currentMatch = runGame(yourChoice, getComputerChoice())
       console.log(currentMatch)
@@ -34,14 +34,16 @@ const runGame = (playerSelection, computerSelection) => {
       } else if (currentMatch.includes("Loss")) {
         computer ++
       }
+      if (player == 5) {
+        return "Player Wins!"
+      } else if (computer == 5) {
+        return "Computer Wins!"
+      } 
     }
-    if (player > computer) {
-      return "Player Wins!"
-    } else if (player < computer) {
-      return "Computer Wins!"
-    } else {
-      return "Draw :("
-    } 
   }
+
+  console.log("You will be playing a computer in a game of Rock, Paper, Scissors. The winner will be the first one who wins 5 games")
+  
+  console.log(game())
 
 
