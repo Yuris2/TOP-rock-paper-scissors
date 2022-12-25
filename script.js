@@ -23,3 +23,24 @@ const runGame = (playerSelection, computerSelection) => {
         return "Loss"+playerSelection+ " "+computerSelection
       }
   }
+
+  const game = () => {
+    let player = 0
+    let computer = 0
+    for (let i = 0; i < 5; i++) {
+      let currentMatch = runGame(yourChoice, getComputerChoice())
+      console.log(currentMatch)
+     if (currentMatch.includes("Win")) {
+        player ++
+      } else if (currentMatch.includes("Loss")) {
+        computer ++
+      }
+    }
+    if (player > computer) {
+      return "Player Wins!"
+    } else if (player < computer) {
+      return "Computer Wins!"
+    } else {
+      return "Draw :("
+    } 
+  }
