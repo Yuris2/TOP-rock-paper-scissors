@@ -12,15 +12,13 @@ const getComputerChoice = () => {
     }
 }
 
-let yourChoice = prompt ("Choose")
-
 const runGame = (playerSelection, computerSelection) => {
     if (playerSelection.toLowerCase() === computerSelection) {
         return "Draw"
       } else if ((playerSelection.toLowerCase () == "rock" && computerSelection == "scissors") || (playerSelection.toLowerCase () == "scissors" && computerSelection == "paper") || (playerSelection.toLowerCase () == "paper" && computerSelection == "rock")) {
-        return "Win" +playerSelection + " "+computerSelection
+        return "Win! "+playerSelection+" beats "+computerSelection+ "!"
       } else if ((playerSelection.toLowerCase () == "rock" && computerSelection == "paper") || (playerSelection.toLowerCase () == "scissors" && computerSelection == "rock") || (playerSelection.toLowerCase () == "paper" && computerSelection == "scissors")) {
-        return "Loss"+playerSelection+ " "+computerSelection
+        return "Loss... "+computerSelection+" beats "+playerSelection+ "!"
       }
   }
 
@@ -28,6 +26,7 @@ const runGame = (playerSelection, computerSelection) => {
     let player = 0
     let computer = 0
     for (let i = 0; i < 5; i++) {
+      let yourChoice = prompt ("Choose Rock, Paper, or Scissors")
       let currentMatch = runGame(yourChoice, getComputerChoice())
       console.log(currentMatch)
      if (currentMatch.includes("Win")) {
@@ -44,3 +43,5 @@ const runGame = (playerSelection, computerSelection) => {
       return "Draw :("
     } 
   }
+
+
