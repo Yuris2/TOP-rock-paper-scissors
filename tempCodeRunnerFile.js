@@ -1,4 +1,3 @@
-
 const getComputerChoice = () => {
     let x = Math.floor(Math.random() * 3 + 1)
     if (x == 1 ) {
@@ -14,8 +13,4 @@ const getComputerChoice = () => {
 
 let yourChoice = prompt ("Choose")
 
-const runGame = (playerSelection, computerSelection) => {
-    if (playerSelection.toLowerCase() === computerSelection) {
-      return "Draw"
-    }
-  }
+console.log(yourChoice)
