@@ -9,10 +9,11 @@
 </head>
 <body></body>
     <div>Play to 5</div>
+    <div id="Result">Result : </div>
     <div id="Computer">0</div>
     <div id="You">0</div>
-    <button id = "Rock" onclick="choose('rock')">Rock</button>
-    <button id = "Paper" onclick="choose('paper')">Paper</button>
-    <button id = "Scissors" onclick="choose('scissors')">Scissors</button>
+    <button id = "Rock" onclick="runGame('rock', getComputerChoice())">Rock</button>
+    <button id = "Paper" onclick="runGame('paper', getComputerChoice())">Paper</button>
+    <button id = "Scissors" onclick="runGame('scissors', getComputerChoice())">Scissors</button>
 </body>
 </html>

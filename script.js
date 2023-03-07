@@ -1,4 +1,3 @@
-let playerChoice;
 
 const getComputerChoice = () => {
     let x = Math.floor(Math.random() * 3 + 1)
@@ -12,41 +11,15 @@ const getComputerChoice = () => {
         return "scissors"
     }
 }
-
-const choose = (playerInput) => {
-  playerChoice = playerInput;
-}
-
 const runGame = (playerSelection, computerSelection) => {
   if (playerSelection.toLowerCase() === computerSelection) {
+    alert("Draw")
     return "Draw"
   } else if ((playerSelection.toLowerCase () == "rock" && computerSelection == "scissors") || (playerSelection.toLowerCase () == "scissors" && computerSelection == "paper") || (playerSelection.toLowerCase () == "paper" && computerSelection == "rock")) {
+    alert("Win")
     return "Win! "+playerSelection+" beats "+computerSelection+ "!"
   } else if ((playerSelection.toLowerCase () == "rock" && computerSelection == "paper") || (playerSelection.toLowerCase () == "scissors" && computerSelection == "rock") || (playerSelection.toLowerCase () == "paper" && computerSelection == "scissors")) {
+    alert("Loss")
     return "Loss... "+computerSelection+" beats "+playerSelection+ "!"
   }
 }
-
-
-const game = () => {
-  let player = 0
-  let computer = 0
-  while (true) {
-    let currentMatch = runGame(playerChoice, getComputerChoice())
-   if (currentMatch.includes("Win")) {
-      player ++
-    } else if (currentMatch.includes("Loss")) {
-      computer ++
-    }
-    /*if (player == 5) {
-      return "Player Wins!"
-      break
-  } else if (computer == 5) {
-      return "Computer Wins!"
-      break 
-  } */
-}
-
-}
-
-console.log(game())
