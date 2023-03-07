@@ -26,21 +26,18 @@ const game = () => {
   let player = 0
   let computer = 0
   while (true) {
-    let yourChoice = prompt ("Choose Rock, Paper, or Scissors")
-    let currentMatch = runGame(yourChoice, getComputerChoice())
-    console.log(currentMatch)
    if (currentMatch.includes("Win")) {
       player ++
     } else if (currentMatch.includes("Loss")) {
       computer ++
     }
-    if (player == 5) {
+    /*if (player == 5) {
       return "Player Wins!"
       break
   } else if (computer == 5) {
       return "Computer Wins!"
-      break
-  } 
+      break 
+  } */
 }
 
 }
