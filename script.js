@@ -32,6 +32,7 @@ const game = () => {
   let player = 0
   let computer = 0
   while (true) {
+    let currentMatch = runGame(playerChoice, getComputerChoice())
    if (currentMatch.includes("Win")) {
       player ++
     } else if (currentMatch.includes("Loss")) {
