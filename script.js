@@ -1,3 +1,5 @@
+let playerChoice;
+
 const getComputerChoice = () => {
     let x = Math.floor(Math.random() * 3 + 1)
     if (x == 1 ) {
@@ -9,6 +11,10 @@ const getComputerChoice = () => {
     else if (x == 3 ){
         return "scissors"
     }
+}
+
+const choose = (playerInput) => {
+  playerChoice = playerInput;
 }
 
 const runGame = (playerSelection, computerSelection) => {
