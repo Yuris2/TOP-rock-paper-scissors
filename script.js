@@ -31,10 +31,12 @@ const runGame = (playerSelection, computerSelection) => {
 
   if(computerWins == 5){
     alert("The Computer Wins. Resetting Game")
+    isplayResult.innerHTML = "Result:";
     computerWins = 0;
     playerWins = 0;
   } else if (playerWins == 5) {
     alert("You Win. Resetting Game")
+    isplayResult.innerHTML = "Result:";
     computerWins = 0;
     playerWins = 0;
   }
